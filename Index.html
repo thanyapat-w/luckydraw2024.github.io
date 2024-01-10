@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Draw System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-settings">
+            <h2>Attendees</h2>
+            <!-- Added textarea -->
+            <textarea id="nameList" rows="5" placeholder="Enter names (one per line)"></textarea>
+            <button id="addName" type="button">Add Name</button>
+            <p id="numberOfNames">Attendees count: <span id="attendeesCount">0</span></p>
+            <h2>Random Criteria Setting</h2>
+            <h3>Choose how many winners</h3>
+            <!-- Add the dropdown list for selecting random numbers -->
+            <label for="randomNumber">Select Random Number:</label>
+            <select id="randomNumber">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <div class="toggle-switch">
+                <p>Remove after draw:</p>
+                <label class="switch">
+                    <input type="checkbox" id="removeAfterDraw">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="result">
+            <!-- <h3>Congratulations</h3> -->
+            <div id="resultBox" class="two-columns"></div>
+            <button id="shuffleButton">Winners</button>
+            <div class="firework-container">
+                <img id="fireworkAnimation" src="confetti.gif" alt="Firework Animation">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

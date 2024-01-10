@@ -1,0 +1,142 @@
+body, html {
+    height: 100%; /* Ensure that body and html elements take up full height */
+    font-family: "KPMG Bold",Arial, sans-serif;
+    margin: 0;
+}
+.container {
+    display: flex;
+    height: 100%;
+    overflow-y: auto; /* Add a vertical scrollbar if content overflows */
+}
+.input-settings {
+    flex: 1; /* Takes up 1/4 of screen width */
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+.input-settings textarea {
+    width: calc(100% - 20px); /* Adjusted width to leave space for padding */
+    height: 100px; /* Set a fixed height */
+    resize: vertical; /* Allow vertical resizing */
+    margin-bottom: 10px; /* Added margin for spacing */
+    font-family: "KPMG Bold",Arial, sans-serif;
+}
+.input-settings button {
+    width: 100%; /* Make the button take up full width */
+    font-family: "KPMG Bold",Arial, sans-serif;
+    font-weight: bold;
+}
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add margin for spacing */
+}
+.toggle-switch p {
+    margin-right: 10px; /* Add space between text and toggle switch */
+}
+.result {
+    flex: 3; /* Takes up 3/4 of screen width */
+    padding: 20px;
+    background-image: url('Screen\ Lucky\ Draw-01.png'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: 100% 100%; /* This will stretch the image to cover the entire background */
+    background-position: center; /* Center the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add position relative to allow absolute positioning of elements inside */
+}
+#resultBox {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px; /* Adjust the margin as needed */
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 100px;
+    height: max-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.two-columns {
+    display: flex;
+    justify-content: space-around; /* Distribute space around items */
+    margin: 0 auto; /* Center the flex container horizontally */
+    flex-wrap: wrap;
+}
+.two-columns > div {
+    flex-basis: 45%;
+}
+.column {
+    flex-basis: 0%;
+}
+.column p {
+    margin: 0;
+}
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+ul li {
+    margin: 0; /* Remove default margin */
+}
+#shuffleButton {
+    width: 85%;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px; /* Adjust padding to make the button thicker */
+    font-family: "KPMG",Arial, sans-serif;
+    font-size: 1.5em; /* Set the font size to x times the parent element's font size */
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firework-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Make sure the firework is above other elements */
+}
+.firework-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#fireworkAnimation {
+    max-width: none; /* Allow the image to exceed its natural dimensions */
+    width: 100%; /* Make the width 100% of its container */
+    height: 100%; /* Make the height 100% of its container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    position: absolute; /* Position the image absolutely within its parent */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+#rollingElement {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px; /* Adjust the width as needed */
+}
+@keyframes roll {
+    0% { transform: translateY(-50%); }
+    50% { transform: translateY(50%); }
+    100% { transform: translateY(-50%); }
+}
+.rolling-effect {
+    animation: roll 0.1s infinite;
+}
